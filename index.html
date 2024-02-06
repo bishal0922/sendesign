@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erbie</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+    <script src="./static/js/script.js"></script>
+    <link href="./static/css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Erbie Control Center</h1>
+        <div id="status">
+            <table class="status-table">
+                <thead>
+                    <tr>
+                        <th>Status Item</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cups in Hand:</td>
+                        <td id="cupsInHand">0</td>
+                    </tr>
+                    <tr>
+                        <td>Clean Cups:</td>
+                        <td id="cleanCups">0</td>
+                    </tr>
+                    <tr>
+                        <td>Used Cups:</td>
+                        <td id="usedCups">0</td>
+                    </tr>
+                    <tr>
+                        <td>Coffee Left (L):</td>
+                        <td id="coffeeLeft">0</td>
+                    </tr>
+                    <tr>
+                        <td>Battery Level (%):</td>
+                        <td id="batteryLevel">0</td>
+                    </tr>
+                    <tr>
+                        <td>Expected Time Till Refill:</td>
+                        <td id="timeTillRefill">0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Refresh Button -->
+            <button class="refresh-button" onclick="refreshStatus()">Refresh Status</button>
+        </div>
+    </div>
+</body>
+</html>
