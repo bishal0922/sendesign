@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erbie Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+              <!-- Border for the path of the robot
+              <div class="path-border"></div> -->
+        <!-- <div class="robot"></div> -->
+
+    <div class="container">
+
+        <h1 class="text-center mt-5">Erbie Control Center</h1>
+        
+        <!-- Cups Data -->
+        <div class="cups-group">
+            <h2 class="group-title text-center">Cups Status</h2>
+            <div class="row mt-4">
+                <!-- Cups in Hand -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <img src="./static/images/stack-cups.png" class="card-img-top" alt="Cups in Hand">
+                            <h5 class="card-title">Cups in Hand</h5>
+                            <p class="card-text" id="cupsInHand">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clean Cups -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <img src="./static/images/cup.png" class="card-img-top" alt="Clean Cups">
+                            <h5 class="card-title">Clean Cups</h5>
+                            <p class="card-text" id="cleanCups">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Used Cups -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <img src="./static/images/cup2.png" class="card-img-top" alt="Used Cups">
+                            <h5 class="card-title">Used Cups</h5>
+                            <p class="card-text" id="usedCups">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Other Data -->
+        <div class="other-data">
+            <h2 class="group-title text-center">Other Status</h2>
+            <div class="row mt-4">
+                <!-- Coffee Left -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <img src="./static/images/water.png" class="card-img-top" alt="Coffee Left">
+                            <h5 class="card-title">Coffee Left (L)</h5>
+                            <p class="card-text" id="coffeeLeft">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Battery Level -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <img src="./static/images/low-battery.png" class="card-img-top" alt="Battery Level">
+                            <h5 class="card-title">Battery Level (%)</h5>
+                            <p class="card-text" id="batteryLevel">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expected Time Till Refill -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <img src="./static/images/timer.png" class="card-img-top" alt="Expected Time Till Refill">
+                            <h5 class="card-title">Expected Time Till Refill</h5>
+                            <p class="card-text" id="timeTillRefill">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Refresh Button -->
+        <button class="btn btn-primary btn-block refresh-button" onclick="refreshStatus()">Refresh Status</button>
+    </div>
+    </div>
+
+    <h1>Hand Gesture Recognition</h1>
+    <img src="{{ url_for('video_feed') }}" alt="Video Stream" style="width:640px;height:480px;">
+
+
+    <!-- Bootstrap JS (Optional, for certain Bootstrap functionalities) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Your custom script -->
+    <script src="./static/js/script.js"></script>
+</body>
+</html>
