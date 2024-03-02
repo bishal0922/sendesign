@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // setTimeout(refreshStatus, 20000); // Add a 2-second delay before executing refreshStatus
     
     // it executes immediately for some reason
-    setInterval(refreshStatus, 2500); // Execute refreshStatus every 20 seconds
+    refreshStatus();
 });
 
 
